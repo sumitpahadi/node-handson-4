@@ -25,7 +25,7 @@ function Login() {
     console.log("token is "+token);
 
     axios
-      .post("http://localhost:5001/login", formData)
+      .post("https://backend-irql.onrender.com/login", formData)
       .then((response) => {
         if (response.data.msg==null) {
           alert(response.data)

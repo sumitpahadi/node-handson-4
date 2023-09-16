@@ -7,7 +7,7 @@ function Home() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    axios.get('http://localhost:5001/dashboard', {
+    axios.get('https://backend-irql.onrender.com/dashboard', {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -24,7 +24,7 @@ function Register() {
     if (formData.password === formData.confirmPassword) {
       e.preventDefault();
 
-      axios.post("http://localhost:5001/register", formData)
+      axios.post("https://backend-irql.onrender.com/register", formData)
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("token", token);
