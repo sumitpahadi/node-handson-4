@@ -27,9 +27,14 @@ function Register() {
       axios.post("https://backend-irql.onrender.com/register", formData)
       .then((response) => {
         const token = response.data.token;
-        localStorage.setItem("token", token);
-        console.log(response.data);
-        alert("user is registered in website");
+          localStorage.setItem("token", token);
+          console.log(response.data);
+          if (response.data.msg == null) {
+            alert(response.data);
+          } else {
+            alert(response.data.msg);
+          }
+      
       })
       .catch((error) => {
         console.error("Error registering:", error);
